@@ -1,0 +1,35 @@
+{
+  "name": "haiku",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "db": "node ./db > ./static/db.json",
+    "start": "next start",
+    "build": "npm run db && next build",
+    "deploy": "npm run build && next export && (cd ./out && now -A ../now.json && now -A ../now.json alias)",
+    "dev": "next"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "next": "^4.2.2",
+    "react": "^16.2.0",
+    "react-dom": "^16.2.0"
+  },
+  "devDependencies": {
+    "@remy/eslint": "^1.3.0",
+    "babel-eslint": "^7.2.3",
+    "eslint": "^4.15.0",
+    "eslint-config-react-app": "^2.0.1",
+    "eslint-plugin-flowtype": "^2.41.0",
+    "eslint-plugin-import": "^2.8.0",
+    "eslint-plugin-jest": "^21.6.1",
+    "eslint-plugin-jsx-a11y": "^5.1.1",
+    "eslint-plugin-node": "^5.2.1",
+    "eslint-plugin-react": "^7.5.1",
+    "micro-dev": "^2.2.0"
+  }
+}
